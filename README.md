@@ -1,7 +1,7 @@
 # blog-website
 
 * this is a my blog website which is made with the help of technologies like:
-bash```
+
 frontend -> html , css, javascript
 template egine -> embedded javacsript(EJS)
 backend -> Nodejs, Express, MongoDB , mongoose
