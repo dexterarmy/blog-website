@@ -7,9 +7,9 @@ template egine -> embedded javacsript(EJS)
 backend -> Nodejs, Express, MongoDB , mongoose
 
 * How to run this website on your local machine( i am using linux ubuntu ): 
-   1. First install node and npm in your local machine with the following command. I am using linux ubuntu, if you are using another operating system then simply look for the command to install nodejs and npm in your machine on google. Apart from this all the other commands will be th same
+   1. First install node and npm in your local machine with the following command. I am using linux ubuntu, if you are using another operating system then simply look for the command to install nodejs and npm in your machine on google. Apart from this all the other commands will be the same
    bash```
-   $ sudo apt install npm nodejs
+    sudo apt install npm nodejs
    ```
    2. Clone the repository by running the following command in terminal:
    bash```
