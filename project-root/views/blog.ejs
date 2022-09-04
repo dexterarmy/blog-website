@@ -6,7 +6,29 @@
   <body class="container">
     <header><%- include('./partials/header'); %></header>
 
-    <main></main>
+    <main>
+      <div class="blog">
+        <% blogs.forEach(blog => { %>
+        <div class="blog-data">
+          <p><%=blog.date.toDateString()%></p>
+          <h2><a href="/<%=blog.title%>"><%=blog.title %></a></h2>
+          <p><%=blog.summary%></p>
+        </div>
+        <% })%>
+      </div>
+      <div class="buttons">
+        <%if(page == 1){%>
+        <p>Previous</p>
+        <a href="/blog?page=<%=page + 1%>" class="next">Next</a>
+        <%}else if(page > 1 && page <= Math.ceil(blogs.length / limit)){%>
+        <a href="/blog?page=<%=page - 1%>" class="previous">Previous</a>
+        <a href="/blog?page=<%=page + 1%>" class="next">Next</a>
+        <%}else if(page > Math.ceil(blogs.length / limit)) {%>
+        <a href="/blog?page=<%=page - 1%>" class="previous">Previous</a>
+        <p>Next</p>
+        <%}%>
+      </div>
+    </main>
 
     <footer><%- include('./partials/footer'); %></footer>
   </body>
