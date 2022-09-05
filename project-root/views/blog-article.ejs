@@ -17,16 +17,16 @@
       </div>
       <div class="buttons">
         <%if(blog.id == blogList[0].id){%>
-        <a href="/<%=blogList[1].title%>">Next article</a>
+        <a href="/<%=blogList[1].id%>">Next article</a>
         <%}else if(blog.id == blogList[blogList.length - 1].id){%>
-        <a href="/<%=blogList[blogList.length - 2].title%>">Previous article</a>
+        <a href="/<%=blogList[blogList.length - 2].id%>">Previous article</a>
         <%} else{%>
         <a
-          href="/<%=blogList[blogList.findIndex(el => el.id == blog.id) - 1 ].title%>"
+          href="/<%=blogList[blogList.findIndex(el => el.id == blog.id) - 1 ].id%>"
           >Previous article</a
         >
         <a
-          href="/<%=blogList[blogList.findIndex(el => el.id == blog.id) + 1 ].title%>"
+          href="/<%=blogList[blogList.findIndex(el => el.id == blog.id) + 1 ].id%>"
           >Next article</a
         >
         <%}%>

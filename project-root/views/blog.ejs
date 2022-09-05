@@ -11,7 +11,7 @@
         <% blogs.forEach(blog => { %>
         <div class="blog-data">
           <p><%=blog.date.toDateString()%></p>
-          <h2><a href="/<%=blog.title%>"><%=blog.title %></a></h2>
+          <h2><a href="/<%=blog.id%>"><%=blog.title %></a></h2>
           <p><%=blog.summary%></p>
         </div>
         <% })%>

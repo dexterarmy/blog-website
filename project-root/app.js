@@ -21,11 +21,14 @@ app.get("/blog", async (req, res, next) => {
 });
 
 // fetch blog article
-app.get("/:name", async (req, res, next) => {
-  const blogList = await Blog.find();
-  const blog = await Blog.findOne({ title: req.params.name });
-
-  res.render("blog-article", { blog, blogList });
+app.get("/:id", async (req, res, next) => {
+  try {
+    const blogList = await Blog.find();
+    const blog = await Blog.findById(req.params.id);
+    res.render("blog-article", { blog, blogList });
+  } catch (err) {
+    console.log(err.name, err.message);
+  }
 });
 
 // create blogs
